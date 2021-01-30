@@ -338,9 +338,19 @@ audio:hover {
     width: 90%;
   }
 
+  .text {
+    user-select: none;
+  }
+
   .imgP:hover {
     height: 95%;
     width: 95%;
+  }
+
+  .imgP:hover + .text {
+    opacity: 1;
+    user-select: none;
+    pointer-events: none;
   }
 
   .columnas {
