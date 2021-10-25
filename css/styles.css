@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,900;1,300;1,900&display=swap");
+
+:root {
+  --image1: -15vh;
+  --chars: 1;
+  --title: 75vh;
+  --imageMov: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(160, 162, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(84, 86, 175);
+}
+
+body {
+  background-image: linear-gradient(#ffffff, #e0fff7, #fffebf);
+}
+
+.contenedores {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000;
+  align-items: center;
+}
+
+h3 {
+  font-family: "YellowTail", cursive;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+.titular {
+  height: 25vh;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 6vh 6vw 0 0;
+}
+
+.icono {
+  height: 25vh;
+  width: 25%;
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgV {
+  transition: height 0.3s ease-out;
+  height: 8vw;
+}
+
+.imgV:hover {
+  height: 9vw;
+}
+
+.contenedoresi {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  position: relative;
+}
+
+.columnas {
+  display: flex;
+  flex-grow: 10;
+  width: 33vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+}
+
+.imgP {
+  height: 70%;
+  width: 70%;
+  transition: 0.3s ease-out;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: var(--chars);
+}
+
+.text {
+  z-index: 2;
+  position: absolute;
+  color: #3a3a3a;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  user-select: none;
+}
+
+.imgP:hover {
+  opacity: 0.5;
+  height: 75%;
+  width: 75%;
+}
+
+.imgP:hover + .text {
+  opacity: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.contenedoresii {
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/Chill.webp);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 1))
+  );
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  height: 100vh;
+}
+
+.fila1 {
+  display: flex;
+  flex-grow: 10;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  height: 100px;
+  max-width: 400px;
+  transition: 0.5s ease-out;
+  background-color: #c3ffc3ab;
+  color: #49964fc5;
+  box-shadow: 0px 26px 15px -3px #00000059;
+  user-select: none;
+  transform: translateY(var(--title));
+}
+
+.fila1:hover {
+  user-select: none;
+  background-color: #c3ffc3;
+  color: #49964f;
+}
+
+.fila2 {
+  height: 105vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+  border: none !important;
+  box-shadow: 0px 4vh 20px -3px #00000062 inset, 0px -4vh 20px -3px #00000062 inset;
+  transition: initial;
+  background: url(../images/Sky.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+/*
+.sky {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  transition: transform initial;
+  transform: translate(var(--imageMov), var(--image1));
+  z-index: -1;
+}
+*/
+
+.fila3 {
+  position: relative;
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fed8ff;
+}
+
+.contenedoresiii {
+  position: relative;
+  height: 105vh;
+  overflow: hidden;
+}
+
+.map_l {
+  height: 5vh;
+  width: auto;
+  filter: invert(48%) sepia(49%) saturate(2106%) hue-rotate(318deg)
+    brightness(101%) contrast(98%);
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  color: #fd5b71;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: #dd253e;
+}
+
+audio {
+  transition: 0.3s;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #afcbff;
+}
+
+audio:focus,
+audio:active {
+  outline: none;
+}
+
+audio:hover {
+  height: 64px;
+  width: 305px;
+}
+
+.contenedoresiiii {
+  display: flex;
+  height: fit-content;
+}
+
+.background {
+  background-image: url(../images/cherry.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fila3 .footer {
+  width: 100%;
+  height: 3vh;
+  background-color: #ffffffaa;
+  color: #fd5b71;
+  position: absolute;
+  font-size: 0.6em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.map_d {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdcf771;
+  /* box-shadow: 0px 3vh 20px -10px #00000062 inset; */
+}
+
+.kaori_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+  width: 50%;
+  background-image: url(../images/kaori_cherry.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.kaori_info {
+  width: 100%;
+  height: 35vh;
+  background-color: #ffdcf771;
+  box-shadow: 2vh 0 20px -10px #00000062 inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.torrent {
+  margin-top: 1.5em;
+  font-size: 15px;
+}
+
+.play {
+  height: 5vh;
+  width: auto;
+  filter: invert(48%) sepia(49%) saturate(2106%) hue-rotate(318deg)
+    brightness(101%) contrast(98%);
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.footer h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 1370px) {
+  .logo {
+    height: 80%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .contenedoresi {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35vh 1vh 35vh 1vh 35vh;
+    grid-template-areas:
+      "kaori"
+      "."
+      "arima"
+      "."
+      "tsubaki";
+  }
+
+  #columnas1 {
+    grid-area: kaori;
+    margin: auto;
+  }
+
+  #columnas2 {
+    grid-area: arima;
+    margin: auto;
+  }
+
+  #columnas3 {
+    grid-area: tsubaki;
+    margin: auto;
+  }
+
+  .imgP {
+    height: 90%;
+    width: 90%;
+  }
+
+  .imgP:hover {
+    height: 95%;
+    width: 95%;
+  }
+
+  .columnas {
+    font-size: 250%;
+  }
+
+  .fila2 {
+    background-position: -500;
+  }
+
+  .fila3 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .background {
+    width: 100%;
+  }
+
+  .kaori_container {
+    width: 100%;
+  }
+
+  .kaori_info {
+    box-shadow: 0 2vh 20px -10px #00000062 inset;
+  }
+
+  .titular {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .logo {
+    height: 50%;
+    width: auto;
+  }
+
+  .icono {
+    display: none;
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  .fila1 {
+    height: 90px;
+    max-width: 300px;
+  }
+
+  .sky {
+    object-position: 25%;
+  }
+}
+
+@media only screen and (max-width: 635px) {
+  .logo {
+    height: 40%;
+    width: auto;
+  }
+
+  .sky {
+    object-position: 30%;
+  }
+}
