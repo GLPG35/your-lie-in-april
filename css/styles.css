@@ -402,7 +402,7 @@ audio:hover {
   }
 
   .fila2 {
-    background-position: -500;
+    background-size: auto 110%;
   }
 
   .fila3 {
@@ -445,10 +445,6 @@ audio:hover {
   .fila1 {
     height: 90px;
     max-width: 300px;
-  }
-
-  .sky {
-    object-position: 25%;
   }
 }
 
