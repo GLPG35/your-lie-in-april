@@ -44,7 +44,7 @@ function parallax() {
   if ($(window).width() < 950) {
     $('.fila2').css({
       'background-position': `center ${wScroll-height-300}px`,
-      'background-position-x': '25%'
+      'background-position-x': '27%'
     });
   } else {
     $('.fila2').css('background-position', `center ${wScroll-height}px`);
